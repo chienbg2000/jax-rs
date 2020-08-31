@@ -1,15 +1,15 @@
 package dao;
 
-import entity.ClassDTO;
+import entity.ClassEntity;
 import utils.HibernateUtils;
 
 import javax.persistence.EntityManager;
 
 public class ClassDao {
-    public static ClassDTO getClass(String id){
+    public static ClassEntity getClass(String id){
         EntityManager em = HibernateUtils.getEntityManager();
         em.getTransaction().begin();
-        ClassDTO cl =em.find(ClassDTO.class,id);
+        ClassEntity cl =em.find(ClassEntity.class,id);
         em.getTransaction().commit();
         return cl;
     }

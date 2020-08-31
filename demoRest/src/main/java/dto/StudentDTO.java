@@ -1,9 +1,5 @@
 package dto;
 
-import entity.ClassDTO;
-
-import java.util.Objects;
-
 public class StudentDTO {
     private String id;
     private String fullName;

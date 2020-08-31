@@ -8,12 +8,12 @@ public class StudentEntity {
     private String id;
     private String fullName;
     private Boolean gender;
-    private ClassDTO clazzByClassId;
+    private ClassEntity clazzByClassId;
 
     public StudentEntity() {
     }
 
-    public StudentEntity(String id, String fullName, Boolean gender, ClassDTO clazzByClassId) {
+    public StudentEntity(String id, String fullName, Boolean gender, ClassEntity clazzByClassId) {
         this.id = id;
         this.fullName = fullName;
         this.gender = gender;
@@ -67,11 +67,11 @@ public class StudentEntity {
 
     @ManyToOne
     @JoinColumn(name = "class_id", referencedColumnName = "id", nullable = false, table = "student")
-    public ClassDTO getClazzByClassId() {
+    public ClassEntity getClazzByClassId() {
         return clazzByClassId;
     }
 
-    public void setClazzByClassId(ClassDTO clazzByClassId) {
+    public void setClazzByClassId(ClassEntity clazzByClassId) {
         this.clazzByClassId = clazzByClassId;
     }
 }

@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Objects;
 @Entity
 @Table(name = "class", schema = "qlsvv", catalog = "")
-public class ClassDTO {
+public class ClassEntity {
     private String id;
     private String name;
 
@@ -32,7 +32,7 @@ public class ClassDTO {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ClassDTO that = (ClassDTO) o;
+        ClassEntity that = (ClassEntity) o;
         return Objects.equals(id, that.id) &&
                 Objects.equals(name, that.name);
     }
